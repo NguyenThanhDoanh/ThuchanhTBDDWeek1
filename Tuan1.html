@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Thuchanhtuan1.js"></script>
+</head>
+
+<body>
+    <h3>20054911_NguyenThanhDoanh</h3>
+
+
+
+    <button onclick="Challenge1()">Coding Challenge #1</button>
+
+    <script>
+        function Challenge1() {
+            let massM = prompt("Nhập vào mass của Mark:");
+            let heightM = prompt("Nhập vào height của Mark:");
+            let massJ = prompt("Nhập vào mass của John:");
+            let heightJ = prompt("Nhập vào height của John:");
+
+            let BMIM = Number(massM) / (Number(heightM) * Number(heightM));
+            let BMIJ = Number(massJ) / (Number(heightJ) * Number(heightJ));
+
+            let markHigherBMI = BMIM > BMIJ;
+
+            alert("Mark có BMI cao hơn John hay không? " + markHigherBMI);
+        }
+    </script>
+    <button onclick="Challenge2()">Coding Challenge #2</button>
+
+    <script>
+        function Challenge2() {
+            let massM = prompt("Nhập vào mass của Mark:");
+            let heightM = prompt("Nhập vào height của Mark:");
+            let massJ = prompt("Nhập vào mass của John:");
+            let heightJ = prompt("Nhập vào height của John:");
+
+            let BMIM = Number(massM) / (Number(heightM) * Number(heightM));
+            let BMIJ = Number(massJ) / (Number(heightJ) * Number(heightJ));
+
+            let markHigherBMI = BMIM > BMIJ;
+
+            if (markHigherBMI) {
+                alert("Mark's " + "(" + BMIM + ")" + "is higher than John 's" + "(" + BMIJ + ")");
+            } else {
+                alert("John's " + "(" + BMIJ + ")" + "is higher than Mark 's" + "(" + BMIM + ")");
+            }
+        }
+    </script>
+    <button onclick="Challenge3()">Coding Challenge #3 (data1)</button>
+
+    <script>
+        function Challenge3() {
+            var Dolphins = [96, 108, 89];
+            var Koalas = [88, 91, 110];
+
+            function trungbinhdiem(a, b, c) {
+                return (a + b + c) / 3;
+            }
+            if (trungbinhdiem(Dolphins[0], Dolphins[1], Dolphins[2]) > trungbinhdiem(Koalas[0], Koalas[1], Koalas[2])) {
+                alert("Dolphins win");
+            } else if (trungbinhdiem(Dolphins[0], Dolphins[1], Dolphins[2]) < trungbinhdiem(Koalas[0], Koalas[1], Koalas[2])) {
+                alert("Koalas win");
+            } else {
+                alert("Draw");
+            }
+        }
+    </script>
+    <button onclick="Challenge3_1()">Coding Challenge #3 ( Data Bonus 1)</button>
+
+    <script>
+        function Challenge3_1() {
+            var Dolphins = [97, 112, 101];
+            var Koalas = [109, 95, 123];
+
+            function trungbinhdiem(a, b, c) {
+                if (((a + b + c) / 3) < 100)
+                    return 0;
+                else
+                    return (a + b + c) / 3;
+            }
+            if (trungbinhdiem(Dolphins[0], Dolphins[1], Dolphins[2]) > trungbinhdiem(Koalas[0], Koalas[1], Koalas[2])) {
+                alert("Dolphins win");
+            } else if (trungbinhdiem(Dolphins[0], Dolphins[1], Dolphins[2]) < trungbinhdiem(Koalas[0], Koalas[1], Koalas[2])) {
+                alert("Koalas win");
+            } else {
+                alert("Draw");
+            }
+        }
+    </script>
+    <button onclick="Challenge3_2()">Coding Challenge #3 ( Data Bonus 2)</button>
+
+    <script>
+        function Challenge3_2() {
+            var Dolphins = [97, 112, 101];
+            var Koalas = [109, 95, 106];
+
+            function trungbinhdiem(a, b, c) {
+
+                return (a + b + c) / 3;
+            }
+
+            if (trungbinhdiem(Dolphins[0], Dolphins[1], Dolphins[2]) > trungbinhdiem(Koalas[0], Koalas[1], Koalas[2])) {
+                alert("Dolphins win");
+            } else if (trungbinhdiem(Dolphins[0], Dolphins[1], Dolphins[2]) < trungbinhdiem(Koalas[0], Koalas[1], Koalas[2])) {
+                alert("Koalas win");
+            } else if (trungbinhdiem(Dolphins[0], Dolphins[1], Dolphins[2]) == trungbinhdiem(Koalas[0], Koalas[1], Koalas[2]) && trungbinhdiem(Dolphins[0], Dolphins[1], Dolphins[2]) >= 100 && trungbinhdiem(Koalas[0], Koalas[1], Koalas[2]) >= 100) {
+                alert("Draw");
+            } else {
+                alert("No team wins");
+            }
+        }
+    </script>
+    <button onclick="Challenge4()">Coding Challenge #4</button>
+
+    <script>
+        function Challenge4() {
+            function calculateTip(bill) {
+                const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+                const total = bill + tip;
+                alert(`The bill was ${bill}, the tip was ${tip}, and the total value ${total}`);
+            }
+
+            // Test for bill values 275, 40 and 430
+            calculateTip(275);
+            calculateTip(40);
+            calculateTip(430);
+
+        }
+    </script>
+
+
+</body>
+
+</html>
